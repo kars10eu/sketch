@@ -56,6 +56,11 @@ $("#wrapper div").hover(function(){
 var newGrid = function(){
 	$("button").on("click",function(){
 		squaresTemp = prompt("How many squares per side should the sketch box have?");
+		if(isNaN(squaresTemp)){
+			alert("This is not a number. Try again ;)");
+			return false;
+		}
+		else
 		width = $("div #wrapper").width();
 		height = $("div #wrapper").height();
 
